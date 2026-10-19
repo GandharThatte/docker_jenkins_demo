@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPOSITORY_URL = 'https://github.com/newdelthis/docker_jenkins_demo.git'
-        DOCKER_IMAGE_NAME = 'newdelthis/docker_jenkins_demo'
+        GIT_REPOSITORY_URL = 'https://github.com/GandharThatte/docker_jenkins_demo.git'
+        DOCKER_IMAGE_NAME = 'GandharThatte/docker_jenkins_demo'
         IMAGE_TAG = '1.0'
     }
 
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        git branch: 'main', url: GIT_REPOSITORY_URL
+                        git branch: 'main', url: https://github.com/GandharThatte/docker_jenkins_demo.git
                     } catch (Exception e) {
                         echo "Failed to clone repository: ${e.message}"
                         error "Failed to clone repository"
